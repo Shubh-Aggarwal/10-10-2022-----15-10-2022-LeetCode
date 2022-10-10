@@ -1,0 +1,12 @@
+int isPrefixOfWord(string sentence, string searchWord) {
+        stringstream str(sentence); //count total no.s of group of words
+        string words;
+        int count=1;
+        while(str >> words){
+            if(words.find(searchWord) == 0)
+                return count;
+            else
+                ++count;
+        }
+        return -1;
+    }
